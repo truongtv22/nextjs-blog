@@ -5,10 +5,9 @@ import Script from 'next/script';
 
 import styles from './layout.module.css';
 
-const name = '[Your Name]';
 export const siteTitle = 'Tạ Trường & Như Ngọc Wedding';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,11 +22,11 @@ export default function Layout({ children, home }) {
             siteTitle,
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-      </header>
+      <header className={styles.header}></header>
       <main>{children}</main>
     </div>
   );

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { HeartIcon } from '@heroicons/react/24/outline';
+import { HeartIcon, CalendarIcon } from '@heroicons/react/24/outline';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/vi';
@@ -12,7 +12,15 @@ import cdImg from '../public/images/cd-x.jpeg';
 import crImg from '../public/images/cr-x.jpeg';
 
 import heartIcon from '../public/images/icons/heart.png';
+
 import bannerImg from '../public/images/banner.jpeg';
+import coupleImg from '../public/images/couple.jpeg';
+
+import leNapTaiImg from '../public/images/le-nap-tai.jpeg';
+import leThanhHonImg from '../public/images/le-thanh-hon.jpeg';
+
+import nhaGaiImg from '../public/images/tiec-cuoi-nha-gai.png';
+import nhaTraiImg from '../public/images/tiec-cuoi-nha-trai.png';
 
 const CountDown = dynamic(() => import('../components/count-down'), {
   ssr: false,
@@ -252,7 +260,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="couple-section container py-28 space-y-8">
+        <div className="couple-section container py-28 space-y-10">
           <div className="relative pt-20 text-center before:content-[''] before:bg-[url(/images/title-flower.png)] before:bg-center before:bg-cover before:bg-no-repeat before:w-[126px] before:h-[59px] before:absolute before:left-1/2 before:top-0 before:-translate-x-1/2">
             <h2 className="text-4xl">Cô dâu & Chú rể</h2>
           </div>
@@ -263,7 +271,7 @@ export default function Home() {
                 alt="Chú rể Văn Trường"
                 className="w-40 h-40 ring-4 ring-primary rounded-full"
               />
-              <div className="flex-1 space-y-2">
+              <div className="flex-1 space-y-4">
                 <h2 className="text-3xl text-right">Tạ Văn Trường</h2>
                 <div className="-mr-3 p-6 rounded ring-4 ring-primary bg-gray-50">
                   <p>
@@ -283,7 +291,7 @@ export default function Home() {
                 alt="Cô dâu Như Ngọc"
                 className="z-10 w-40 h-40 ring-4 ring-primary rounded-full"
               />
-              <div className="flex-1 space-y-2">
+              <div className="flex-1 space-y-4">
                 <h2 className="text-3xl">Đỗ Thị Như Ngọc</h2>
                 <div className="-ml-3 p-6 rounded ring-4 ring-primary bg-gray-50">
                   <p>
@@ -298,76 +306,126 @@ export default function Home() {
           </div>
         </div>
         <div className="event-section py-28 bg-[url(/images/bg.png)]">
-          <div className="container">
-            <div className="py-12 text-center">
+          <div className="container space-y-10">
+            <div className="text-center">
               <h2 className="text-4xl">Sự Kiện Cưới</h2>
             </div>
-            <div className="grid grid-cols-4">
-              <div className="bg-white p-4 text-center space-y-4">
-                <h3 className="relative pb-2 text-2xl before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
+            <div className="grid grid-cols-4 gap-4">
+              <div className="bg-white p-4 rounded text-center space-y-4">
+                <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
                   LỄ NẠP TÀI
                 </h3>
-                <img
-                  src="https://cdn.biihappy.com/ziiweb/default/website/7744fc9739685fe61c53cd8fe2cf7e52.png"
-                  alt=""
-                />
-                <div>
-                  <p>
-                    <strong>08:00 18/01/2024</strong>
+                <Image src={leNapTaiImg} alt="Lễ Nạp Tài" className="rounded" />
+                <div className="space-y-2">
+                  <strong>08:00 18/01/2024</strong>
+                  <p className="text-[0.96rem]">
+                    Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá
                   </p>
-                  <p>Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá</p>
                 </div>
-                <div>
-                  <div>Thêm vào lịch</div>
-                  <div>Xem bản đồ</div>
-                </div>
-              </div>
-              <div>
-                <h3>TIỆC CƯỚI NHÀ GÁI</h3>
-                <p>
-                  <strong>09:30 18/01/2024</strong>
-                </p>
-                <p>Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá</p>
-                <div>
-                  <div>Thêm vào lịch</div>
-                  <div>Xem bản đồ</div>
+                <div className="space-y-2">
+                  <div className="flex p-1.5 border-2 rounded-full items-center justify-center">
+                    <CalendarIcon className="w-5 h-5 mr-2" />
+                    <p className="mt-1">Thêm vào lịch</p>
+                  </div>
+                  <div className="p-1.5 border-2 rounded-full text-primary border-primary">
+                    Xem bản đồ
+                  </div>
                 </div>
               </div>
-              <div>
-                <h3>TIỆC CƯỚI NHÀ TRAI</h3>
-                <p>
-                  <strong>10:00 19/01/2024</strong>
-                </p>
-                <p>Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá</p>
-                <div>
-                  <div>Thêm vào lịch</div>
-                  <div>Xem bản đồ</div>
-                </div>
-              </div>
-              <div>
-                <h3>LỄ THÀNH HÔN</h3>
-                <img
-                  src="https://cdn.biihappy.com/ziiweb/default/website/eee1cb36b560f0d80f513c4e9be666db.png"
-                  alt=""
+              <div className="bg-white p-4 rounded text-center space-y-4">
+                <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
+                  TIỆC CƯỚI NHÀ GÁI
+                </h3>
+                <Image
+                  src={nhaGaiImg}
+                  alt="Tiệc cưới nhà gái"
+                  className="rounded"
                 />
-                <p>
+                <div className="space-y-2">
+                  <strong>09:30 18/01/2024</strong>
+                  <p className="text-[0.96rem]">
+                    Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex p-1.5 border-2 rounded-full items-center justify-center">
+                    <CalendarIcon className="w-5 h-5 mr-2" />
+                    <p className="mt-1">Thêm vào lịch</p>
+                  </div>
+                  <div className="p-1.5 border-2 rounded-full text-primary border-primary">
+                    Xem bản đồ
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white p-4 rounded text-center space-y-4">
+                <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
+                  TIỆC CƯỚI NHÀ TRAI
+                </h3>
+                <Image
+                  src={nhaTraiImg}
+                  alt="Tiệc cưới nhà trai"
+                  className="rounded"
+                />
+                <div className="space-y-2">
+                  <strong>10:00 19/01/2024</strong>
+                  <p className="text-[0.96rem]">
+                    Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex p-1.5 border-2 rounded-full items-center justify-center">
+                    <CalendarIcon className="w-5 h-5 mr-2" />
+                    <p className="mt-1">Thêm vào lịch</p>
+                  </div>
+                  <div className="p-1.5 border-2 rounded-full text-primary border-primary">
+                    Xem bản đồ
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white p-4 rounded text-center space-y-4">
+                <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
+                  LỄ THÀNH HÔN
+                </h3>
+                <Image
+                  src={leThanhHonImg}
+                  alt="Lễ Thành Hôn"
+                  className="rounded"
+                />
+                <div className="space-y-2">
                   <strong>09:00 20/01/2024</strong>
-                </p>
-                <p>Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá</p>
-                <div>
-                  <div>Thêm vào lịch</div>
-                  <div>Xem bản đồ</div>
+                  <p className="text-[0.96rem]">
+                    Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex p-1.5 border-2 rounded-full items-center justify-center">
+                    <CalendarIcon className="w-5 h-5 mr-2" />
+                    <p className="mt-1">Thêm vào lịch</p>
+                  </div>
+                  <div className="p-1.5 border-2 rounded-full text-primary border-primary">
+                    Xem bản đồ
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="gallery-section">
-          <div>
-            <h2>Album Hình Cưới</h2>
+        <div className="gallery-section container py-28 space-y-10">
+          <div className="relative pt-20 text-center before:content-[''] before:bg-[url(/images/title-flower.png)] before:bg-center before:bg-cover before:bg-no-repeat before:w-[126px] before:h-[59px] before:absolute before:left-1/2 before:top-0 before:-translate-x-1/2">
+            <h2 className="text-4xl">Album Hình Cưới</h2>
           </div>
           <div></div>
         </div>
+      </div>
+      <div className="footer relative text-center py-36 bg-[url(/images/footer-bg.png)] bg-[center_bottom] bg-[length:100%] bg-no-repeat space-y-10">
+        <div className="relative w-[511px] h-[470px] mx-auto bg-[url(/images/footer-couple.png)]">
+          <Image
+            src={coupleImg}
+            alt="Văn Trường & Như Ngọc Wedding"
+            className="max-w-[75%] rounded-full absolute left-[48%] top-[44%] -translate-x-1/2 -translate-y-1/2"
+          />
+        </div>
+        <h2 className="text-6xl">Thank you!</h2>
       </div>
     </Layout>
   );

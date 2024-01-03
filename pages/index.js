@@ -1,20 +1,24 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { HeartIcon } from '@heroicons/react/24/outline';
-import { useCountDown } from 'ahooks/es';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/vi';
 
 import Layout, { siteTitle } from '../components/layout';
+
+import cdImg from '../public/images/cd-x.jpeg';
+import crImg from '../public/images/cr-x.jpeg';
+
 import heartIcon from '../public/images/icons/heart.png';
 import bannerImg from '../public/images/banner.jpeg';
 
-export default function Home() {
-  const [, { days, hours, minutes, seconds }] = useCountDown({
-    targetDate: new Date(2024, 0, 20),
-  });
+const CountDown = dynamic(() => import('../components/count-down'), {
+  ssr: false,
+});
 
+export default function Home() {
   return (
     <Layout>
       <Head>
@@ -66,7 +70,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="invitation-section py-28 bg-[url(/images/bg.png)]">
+        <div className="invitation-section py-28 bg-[url(/images/bg.png)] overflow-hidden">
           <div className="container flex space-x-6">
             <div className="flex-1 relative p-8 bg-white rounded-sm text-center">
               <div className="absolute left-[-150px] top-[-100px] w-[220px] h-[414px] bg-[url(/images/invitation-left.png)] bg-center bg-cover bg-no-repeat" />
@@ -88,7 +92,7 @@ export default function Home() {
                   <div className="text-center">
                     <p className="font-bold">THÁNG 1 / 2024</p>
                   </div>
-                  <table className="table-auto border-b">
+                  <table className="table-auto border-b ml-auto mr-auto">
                     <thead className="border-t border-b">
                       <tr className="h-8">
                         <th className="min-w-14">
@@ -243,86 +247,117 @@ export default function Home() {
                     </tbody>
                   </table>
                 </div>
-                <div className="flex justify-center space-x-8">
-                  <div className="text-center">
-                    <p className="text-4xl text-primary">
-                      {days > 9 ? days : `0${days}`}
-                    </p>
-                    <span className="text-sm text-primary">Ngày</span>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-4xl text-primary">
-                      {hours > 9 ? hours : `0${hours}`}
-                    </p>
-                    <span className="text-sm text-primary">Giờ</span>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-4xl text-primary">
-                      {minutes > 9 ? minutes : `0${minutes}`}
-                    </p>
-                    <span className="text-sm text-primary">Phút</span>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-4xl text-primary">
-                      {seconds > 9 ? seconds : `0${seconds}`}
-                    </p>
-                    <span className="text-sm text-primary">Giây</span>
-                  </div>
+                <CountDown />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="couple-section container py-28 space-y-8">
+          <div className="relative pt-20 text-center before:content-[''] before:bg-[url(/images/title-flower.png)] before:bg-center before:bg-cover before:bg-no-repeat before:w-[126px] before:h-[59px] before:absolute before:left-1/2 before:top-0 before:-translate-x-1/2">
+            <h2 className="text-4xl">Cô dâu & Chú rể</h2>
+          </div>
+          <div className="flex space-x-2">
+            <div className="flex flex-1 flex-row-reverse">
+              <Image
+                src={crImg}
+                alt="Chú rể Văn Trường"
+                className="w-40 h-40 ring-4 ring-primary rounded-full"
+              />
+              <div className="flex-1 space-y-2">
+                <h2 className="text-3xl text-right">Tạ Văn Trường</h2>
+                <div className="-mr-3 p-6 rounded ring-4 ring-primary bg-gray-50">
+                  <p>
+                    Xin chào, Mình là Trường, 29 tuổi, hiện tại đang làm lập
+                    trình viên tại Thanh Hóa. Mình và Cô Dâu sau thời gian tìm
+                    hiểu, nay chúng mình tổ chức Hôn lễ. Mình và Cô Dâu rất mong
+                    mọi người dành chút thời gian đến tham dự đám cưới của chúng
+                    mình.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <HeartIcon className="inline mt-10 w-16 h-16 text-primary" />
+            <div className="flex flex-1">
+              <Image
+                src={cdImg}
+                alt="Cô dâu Như Ngọc"
+                className="z-10 w-40 h-40 ring-4 ring-primary rounded-full"
+              />
+              <div className="flex-1 space-y-2">
+                <h2 className="text-3xl">Đỗ Thị Như Ngọc</h2>
+                <div className="-ml-3 p-6 rounded ring-4 ring-primary bg-gray-50">
+                  <p>
+                    Hi, Mình là Như Ngọc, 24 tuổi, Mình và Chú Rể cùng quê luôn
+                    nha. Hôm nay, chúng mình hạnh phúc chia sẻ niềm vui này với
+                    mọi người. Mình và Chú Rể rất mong mọi người dành chút thời
+                    gian đến tham dự đám cưới của chúng mình.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="couple-section">
-          <div>
-            <h2>Cô dâu & Chú rể</h2>
-          </div>
-          <div>
-            <div>
-              <h2>Tạ Văn Trường</h2>
-              <p>
-                Xin chào, Mình là Trường, 29 tuổi, hiện tại đang làm lập trình
-                viên tại Thanh Hóa. Mình và Cô Dâu sau thời gian tìm hiểu, nay
-                chúng mình tổ chức Hôn lễ. Mình và Cô Dâu rất mong mọi người
-                dành chút thời gian đến tham dự đám cưới của chúng mình.
-              </p>
+        <div className="event-section py-28 bg-[url(/images/bg.png)]">
+          <div className="container">
+            <div className="py-12 text-center">
+              <h2 className="text-4xl">Sự Kiện Cưới</h2>
             </div>
-            <div>
-              <h2>Đỗ Thị Như Ngọc</h2>
-              <p>
-                Hi, Mình là Như Ngọc, 24 tuổi, Mình và Chú Rể cùng quê luôn nha.
-                Hôm nay, chúng mình hạnh phúc chia sẻ niềm vui này với mọi
-                người. Mình và Chú Rể rất mong mọi người dành chút thời gian đến
-                tham dự đám cưới của chúng mình.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="event-section">
-          <div>
-            <h2>Sự Kiện Cưới</h2>
-          </div>
-          <div>
-            <div>
-              <h3>LỄ NẠP TÀI</h3>
-              <p>
-                <strong>08:00 18/01/2024</strong>
-              </p>
-              <p>Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá</p>
-              <div>
-                <div>Thêm vào lịch</div>
-                <div>Xem bản đồ</div>
+            <div className="grid grid-cols-4">
+              <div className="bg-white p-4 text-center space-y-4">
+                <h3 className="relative pb-2 text-2xl before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
+                  LỄ NẠP TÀI
+                </h3>
+                <img
+                  src="https://cdn.biihappy.com/ziiweb/default/website/7744fc9739685fe61c53cd8fe2cf7e52.png"
+                  alt=""
+                />
+                <div>
+                  <p>
+                    <strong>08:00 18/01/2024</strong>
+                  </p>
+                  <p>Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá</p>
+                </div>
+                <div>
+                  <div>Thêm vào lịch</div>
+                  <div>Xem bản đồ</div>
+                </div>
               </div>
-            </div>
-            <div>
-              <h3>LỄ THÀNH HÔN</h3>
-              <p>
-                <strong>09:00 20/01/2024</strong>
-              </p>
-              <p>Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá</p>
               <div>
-                <div>Thêm vào lịch</div>
-                <div>Xem bản đồ</div>
+                <h3>TIỆC CƯỚI NHÀ GÁI</h3>
+                <p>
+                  <strong>09:30 18/01/2024</strong>
+                </p>
+                <p>Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá</p>
+                <div>
+                  <div>Thêm vào lịch</div>
+                  <div>Xem bản đồ</div>
+                </div>
+              </div>
+              <div>
+                <h3>TIỆC CƯỚI NHÀ TRAI</h3>
+                <p>
+                  <strong>10:00 19/01/2024</strong>
+                </p>
+                <p>Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá</p>
+                <div>
+                  <div>Thêm vào lịch</div>
+                  <div>Xem bản đồ</div>
+                </div>
+              </div>
+              <div>
+                <h3>LỄ THÀNH HÔN</h3>
+                <img
+                  src="https://cdn.biihappy.com/ziiweb/default/website/eee1cb36b560f0d80f513c4e9be666db.png"
+                  alt=""
+                />
+                <p>
+                  <strong>09:00 20/01/2024</strong>
+                </p>
+                <p>Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá</p>
+                <div>
+                  <div>Thêm vào lịch</div>
+                  <div>Xem bản đồ</div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,143 +1,274 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { HeartIcon } from '@heroicons/react/24/outline';
+import { useCountDown } from 'ahooks/es';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/vi';
 
 import Layout, { siteTitle } from '../components/layout';
-import heartAirImg from '../public/images/heart-air.png';
+import heartIcon from '../public/images/icons/heart.png';
+import bannerImg from '../public/images/banner.jpeg';
 
 export default function Home() {
+  const [, { days, hours, minutes, seconds }] = useCountDown({
+    targetDate: new Date(2024, 0, 20),
+  });
+
   return (
     <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <div className="header">
-        <div className="topbar">
-          <div className="site-logo">
-            <h1 className="text-2xl">
+        <div className="topbar container p-8">
+          <div className="site-logo space-y-4 text-center">
+            <h1 className="text-4xl">
               <span>Văn Trường </span>
-              <HeartIcon className="inline w-4 h-4" />
+              <HeartIcon className="inline w-8 h-8 text-primary" />
               <span> Như Ngọc</span>
             </h1>
-            <span>Just Married</span>
+            <div>
+              <span className="relative text-sm text-gray-500 before:content-[''] before:bg-gray-300 before:w-8 before:h-px before:absolute before:top-1.5 before:-left-10 after:content-[''] after:bg-gray-300 after:w-8 after:h-px after:absolute after:top-1.5 after:-right-10">
+                Just Married
+              </span>
+            </div>
           </div>
         </div>
-        <div className="navbar">
-          <ul>
-            <li>Về chúng mình</li>
-            <li>Sự kiện</li>
-            <li>Album cưới</li>
-          </ul>
+        <div className="navbar border-t border-gray-100">
+          <div className="container">
+            <ul className="flex justify-center">
+              <li className="p-4 font-bold">Về chúng mình</li>
+              <li className="p-4 font-bold">Sự kiện</li>
+              <li className="p-4 font-bold">Album cưới</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="body">
-        <div className="slider-section">
-          <div>
-            <h2>
-              <span>Văn Trường</span>
-              <HeartIcon className="inline w-4 h-4" />
-              <span>Như Ngọc</span>
+        <div className="slider-section relative ">
+          <Image
+            src={bannerImg}
+            alt="Banner"
+            className="h-[calc(100vh-210px)] min-h-[30rem] object-cover"
+          />
+          <div className="absolute inset-0 bg-black opacity-25" />
+          <div className="container absolute inset-0 m-auto h-fit space-y-4 text-center">
+            <h2 className="text-7xl text-white">
+              <span>Văn Trường </span>
+              <HeartIcon className="inline w-14 h-14 text-primary" />
+              <span> Như Ngọc</span>
             </h2>
-            <span>20 Tháng 1 2024</span>
+            <div>
+              <span className="relative text-lg text-white before:content-[''] before:bg-white before:w-8 before:h-px before:absolute before:top-2 before:-left-10 after:content-[''] after:bg-white after:w-8 after:h-px after:absolute after:top-2 after:-right-10">
+                20 Tháng 1 2024
+              </span>
+            </div>
           </div>
         </div>
-        <div className="invitation-section">
-          <div className="">
-            <h2>Save the Date</h2>
-            <span>For the wedding of</span>
-            <h3>Văn Trường & Như Ngọc</h3>
-            <p>Một lời chúc từ bạn sẽ là niềm hạnh phúc của chúng mình</p>
-          </div>
-          <div>
-            <table className="">
-              <thead>
-                <tr>
-                  <th className="min-w-16">Th 2</th>
-                  <th className="min-w-16">Th 3</th>
-                  <th className="min-w-16">Th 4</th>
-                  <th className="min-w-16">Th 5</th>
-                  <th className="min-w-16">Th 6</th>
-                  <th className="min-w-16">Th 7</th>
-                  <th className="min-w-16">CN</th>
-                </tr>
-              </thead>
-              <tbody className="text-center">
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>6</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>9</td>
-                  <td>10</td>
-                  <td>11</td>
-                  <td>12</td>
-                  <td>13</td>
-                  <td>14</td>
-                </tr>
-                <tr>
-                  <td>15</td>
-                  <td>16</td>
-                  <td>17</td>
-                  <td className="flex items-center justify-center">
-                    <div className="bg-primary w-8 h-8 rounded-full flex items-center justify-center text-white">
-                      <p>18</p>
-                    </div>
-                  </td>
-                  <td>19</td>
-                  <td>
-                    <div className="relative">
-                      <Image
-                        src={heartAirImg}
-                        alt="Hôn lễ"
-                        className="absolute inset-0 h-fit m-auto"
-                      />
-                      <div className="absolute  inset-0 h-fit m-auto text-white">
-                        20
-                      </div>
-                    </div>
-                  </td>
-                  <td>21</td>
-                </tr>
-                <tr>
-                  <td>22</td>
-                  <td>23</td>
-                  <td>24</td>
-                  <td>25</td>
-                  <td>26</td>
-                  <td>27</td>
-                  <td>28</td>
-                </tr>
-                <tr>
-                  <td>29</td>
-                  <td>30</td>
-                  <td>31</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-            <div>
-              <span>18</span>
-              <span>20</span>
-            </div>
-            <div>
-              <div>
-                <p>17</p>
-                <span>Ngày</span>
+        <div className="invitation-section py-28 bg-[url(/images/bg.png)]">
+          <div className="container flex space-x-6">
+            <div className="flex-1 relative p-8 bg-white rounded-sm text-center">
+              <div className="absolute left-[-150px] top-[-100px] w-[220px] h-[414px] bg-[url(/images/invitation-left.png)] bg-center bg-cover bg-no-repeat" />
+              <div className="h-full p-4 py-12 border-4 border-primary/40 space-y-6">
+                <h2 className="text-5xl">Save the Date</h2>
+                <div className="space-y-2">
+                  <span className="text-gray-500">For the wedding of</span>
+                  <h3 className="font-bold text-2xl">Văn Trường & Như Ngọc</h3>
+                </div>
+                <p className="text-gray-600">
+                  Một lời chúc từ bạn sẽ là niềm hạnh phúc của chúng mình
+                </p>
               </div>
-              <div>
-                <p>05</p>
-                <span>Giờ</span>
+            </div>
+            <div className="flex-1 relative bg-white rounded-sm p-8">
+              <div className="absolute right-[-120px] bottom-[-100px] w-[400px] h-[508px] bg-[url(/images/invitation-right.png)] bg-center bg-cover bg-no-repeat" />
+              <div className="h-full p-4 border-4 border-primary/40 space-y-4">
+                <div className="space-y-2">
+                  <div className="text-center">
+                    <p className="font-bold">THÁNG 1 / 2024</p>
+                  </div>
+                  <table className="table-auto border-b">
+                    <thead className="border-t border-b">
+                      <tr className="h-8">
+                        <th className="min-w-14">
+                          <p className="text-sm">Th 2</p>
+                        </th>
+                        <th className="min-w-14">
+                          <p className="text-sm">Th 3</p>
+                        </th>
+                        <th className="min-w-14">
+                          <p className="text-sm">Th 4</p>
+                        </th>
+                        <th className="min-w-14">
+                          <p className="text-sm">Th 5</p>
+                        </th>
+                        <th className="min-w-14">
+                          <p className="text-sm">Th 6</p>
+                        </th>
+                        <th className="min-w-14">
+                          <p className="text-sm">Th 7</p>
+                        </th>
+                        <th className="min-w-14">
+                          <p className="text-sm">CN</p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-center">
+                      <tr className="h-11">
+                        <td>
+                          <p className="text-sm">1</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">2</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">3</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">4</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">5</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">6</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">7</p>
+                        </td>
+                      </tr>
+                      <tr className="h-11">
+                        <td>
+                          <p className="text-sm">8</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">9</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">10</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">11</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">12</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">13</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">14</p>
+                        </td>
+                      </tr>
+                      <tr className="h-11">
+                        <td>
+                          <p className="text-sm">15</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">16</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">17</p>
+                        </td>
+                        <td className="relative">
+                          <div className="flex items-center justify-center">
+                            <div className="bg-primary w-7 h-7 rounded-full flex items-center justify-center">
+                              <p className="text-sm text-white">18</p>
+                            </div>
+                          </div>
+                          <span className="absolute inset-x-0 -bottom-2 text-xs text-[#8f4e27]">
+                            Nạp tài
+                          </span>
+                        </td>
+                        <td>
+                          <p className="text-sm">19</p>
+                        </td>
+                        <td className="relative">
+                          <div className="relative">
+                            <Image
+                              src={heartIcon}
+                              alt="Hôn lễ"
+                              className="absolute inset-0 h-fit m-auto"
+                            />
+                            <div className="absolute inset-0 h-fit m-auto">
+                              <p className="text-sm text-white">20</p>
+                            </div>
+                          </div>
+                          <span className="absolute inset-x-0 -bottom-2 text-xs text-[#8f4e27]">
+                            Hôn lễ
+                          </span>
+                        </td>
+                        <td>
+                          <p className="text-sm">21</p>
+                        </td>
+                      </tr>
+                      <tr className="h-11">
+                        <td>
+                          <p className="text-sm">22</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">23</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">24</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">25</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">26</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">27</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">28</p>
+                        </td>
+                      </tr>
+                      <tr className="h-11">
+                        <td>
+                          <p className="text-sm">29</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">30</p>
+                        </td>
+                        <td>
+                          <p className="text-sm">31</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="flex justify-center space-x-8">
+                  <div className="text-center">
+                    <p className="text-4xl text-primary">
+                      {days > 9 ? days : `0${days}`}
+                    </p>
+                    <span className="text-sm text-primary">Ngày</span>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-4xl text-primary">
+                      {hours > 9 ? hours : `0${hours}`}
+                    </p>
+                    <span className="text-sm text-primary">Giờ</span>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-4xl text-primary">
+                      {minutes > 9 ? minutes : `0${minutes}`}
+                    </p>
+                    <span className="text-sm text-primary">Phút</span>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-4xl text-primary">
+                      {seconds > 9 ? seconds : `0${seconds}`}
+                    </p>
+                    <span className="text-sm text-primary">Giây</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

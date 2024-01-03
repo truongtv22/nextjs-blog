@@ -9,6 +9,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          '2xl': '128px',
+        },
+      },
+
       fontFamily: {
         display: ['var(--font-display)', ...defaultTheme.fontFamily.sans],
         body: ['var(--font-body)', ...defaultTheme.fontFamily.sans],

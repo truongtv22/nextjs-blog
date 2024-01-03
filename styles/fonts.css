@@ -1,28 +1,32 @@
 @font-face {
   font-family: Comfortaa;
   font-weight: 300;
-  src: url('../public/fonts/Comfortaa/Comfortaa-Light.ttf');
+  src: url('../public/fonts/Comfortaa/Comfortaa-Light.woff2') format('woff2'),
+    url('../public/fonts/Comfortaa/Comfortaa-Light.woff') format('woff');
 }
 @font-face {
   font-family: Comfortaa;
   font-weight: 400;
-  src: url('../public/fonts/Comfortaa/Comfortaa-Regular.ttf');
+  src: url('../public/fonts/Comfortaa/Comfortaa-Regular.woff2') format('woff2'),
+    url('../public/fonts/Comfortaa/Comfortaa-Regular.woff') format('woff');
 }
 @font-face {
   font-family: Comfortaa;
   font-weight: 500;
-  src: url('../public/fonts/Comfortaa/Comfortaa-Medium.ttf');
+  src: url('../public/fonts/Comfortaa/Comfortaa-Regular.woff2') format('woff2'),
+    url('../public/fonts/Comfortaa/Comfortaa-Regular.woff') format('woff');
 }
-
 @font-face {
   font-family: Comfortaa;
   font-weight: 600;
-  src: url('../public/fonts/Comfortaa/Comfortaa-SemiBold.ttf');
+  src: url('../public/fonts/Comfortaa/Comfortaa-Bold.woff2') format('woff2'),
+    url('../public/fonts/Comfortaa/Comfortaa-Bold.woff') format('woff');
 }
 @font-face {
   font-family: Comfortaa;
   font-weight: 700;
-  src: url('../public/fonts/Comfortaa/Comfortaa-Bold.ttf');
+  src: url('../public/fonts/Comfortaa/Comfortaa-Bold.woff2') format('woff2'),
+    url('../public/fonts/Comfortaa/Comfortaa-Bold.woff') format('woff');
 }
 
 @font-face {

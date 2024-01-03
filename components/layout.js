@@ -1,15 +1,10 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
-import Script from 'next/script';
 
-import styles from './layout.module.css';
-
-export const siteTitle = 'Tạ Trường & Như Ngọc Wedding';
+export const siteTitle = 'Văn Trường & Như Ngọc Wedding';
 
 export default function Layout({ children }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -26,7 +21,6 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}></header>
       <main>{children}</main>
     </div>
   );

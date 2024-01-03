@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { HeartIcon, CalendarIcon } from '@heroicons/react/24/outline';
-
-import dayjs from 'dayjs';
-import 'dayjs/locale/vi';
+import {
+  HeartIcon,
+  CalendarIcon,
+  ArrowRightIcon,
+} from '@heroicons/react/24/outline';
 
 import Layout, { siteTitle } from '../components/layout';
 
@@ -25,6 +26,93 @@ import nhaTraiImg from '../public/images/tiec-cuoi-nha-trai.png';
 const CountDown = dynamic(() => import('../components/count-down'), {
   ssr: false,
 });
+
+const Fancybox = dynamic(() => import('../components/fancybox'), {
+  ssr: false,
+});
+
+const galleries = [
+  {
+    image: '/images/albums/TRUN0849.jpg',
+    thumb: '/images/albums/TRUN0849s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0912.jpg',
+    thumb: '/images/albums/TRUN0912s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0739.jpg',
+    thumb: '/images/albums/TRUN0739s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0900.jpg',
+    thumb: '/images/albums/TRUN0900s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0538.jpg',
+    thumb: '/images/albums/TRUN0538s.jpeg',
+  },
+  // {
+  //   image: '/images/albums/TRUN0507.jpg',
+  //   thumb: '/images/albums/TRUN0507s.jpeg',
+  // },
+  {
+    image: '/images/albums/TRUN0321.jpg',
+    thumb: '/images/albums/TRUN0321s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0368.jpg',
+    thumb: '/images/albums/TRUN0368s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0383.jpg',
+    thumb: '/images/albums/TRUN0383s.jpeg',
+  },
+  // {
+  //   image: '/images/albums/TRUN0478.jpg',
+  //   thumb: '/images/albums/TRUN0478s.jpeg',
+  // },
+  // {
+  //   image: '/images/albums/TRUN0500.jpg',
+  //   thumb: '/images/albums/TRUN0500s.jpeg',
+  // },
+  {
+    image: '/images/albums/TRUN0660.jpg',
+    thumb: '/images/albums/TRUN0660s.jpeg',
+  },
+  // {
+  //   image: '/images/albums/TRUN0680.jpg',
+  //   thumb: '/images/albums/TRUN0680s.jpeg',
+  // },
+  {
+    image: '/images/albums/TRUN0967.jpg',
+    thumb: '/images/albums/TRUN0967s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0978.jpg',
+    thumb: '/images/albums/TRUN0978s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0946.jpg',
+    thumb: '/images/albums/TRUN0946s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0960.jpg',
+    thumb: '/images/albums/TRUN0960s.jpeg',
+  },
+  // {
+  //   image: '/images/albums/TRUN0980.jpg',
+  //   thumb: '/images/albums/TRUN0980s.jpeg',
+  // },
+  {
+    image: '/images/albums/TRUN0996.jpg',
+    thumb: '/images/albums/TRUN0996s.jpeg',
+  },
+  {
+    image: '/images/albums/TRUN0943.jpg',
+    thumb: '/images/albums/TRUN0943s.jpeg',
+  },
+];
 
 export default function Home() {
   return (
@@ -411,10 +499,34 @@ export default function Home() {
           </div>
         </div>
         <div className="gallery-section container py-28 space-y-10">
-          <div className="relative pt-20 text-center before:content-[''] before:bg-[url(/images/title-flower.png)] before:bg-center before:bg-cover before:bg-no-repeat before:w-[126px] before:h-[59px] before:absolute before:left-1/2 before:top-0 before:-translate-x-1/2">
+          <div className="relative pt-20 text-center before:content-[''] before:bg-[url(/images/title-flower.png)] before:bg-center before:bg-cover before:bg-no-repeat before:w-[126px] before:h-[59px] before:absolute before:left-1/2 before:top-0 before:-translate-x-1/2 space-y-4">
             <h2 className="text-4xl">Album Hình Cưới</h2>
+            {/* <div className="flex items-center justify-center">
+              <div
+                className="flex p-2 px-6 text-white bg-primary rounded cursor-pointer"
+                onClick={() => alert(1)}
+              >
+                <p className="mt-px">Xem Album</p>
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </div>
+            </div> */}
           </div>
-          <div></div>
+          <div>
+            <Fancybox
+              options={{
+                Carousel: {
+                  infinite: false,
+                },
+              }}
+              className="grid grid-cols-3 gap-4"
+            >
+              {galleries.map((item) => (
+                <a key={item.image} data-fancybox="gallery" href={item.image}>
+                  <img src={item.thumb} className="rounded" />
+                </a>
+              ))}
+            </Fancybox>
+          </div>
         </div>
       </div>
       <div className="footer relative text-center py-36 bg-[url(/images/footer-bg.png)] bg-[center_bottom] bg-[length:100%] bg-no-repeat space-y-10">

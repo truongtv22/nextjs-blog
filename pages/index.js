@@ -154,7 +154,7 @@ export default function Home() {
               <ul className="flex flex-col md:flex-row justify-center">
                 <li className="p-4 md:text-base text-sm font-bold">
                   <a href="#couple" className="block">
-                    Về chúng mình
+                    Giới thiệu
                   </a>
                 </li>
                 <li className="p-4 md:text-base md:border-none text-sm font-bold border-t border-b border-primary border-opacity-25">
@@ -558,7 +558,7 @@ export default function Home() {
                       className="rounded"
                     />
                     <div className="space-y-2">
-                      <strong>10:00 19/01/2024</strong>
+                      <strong>10:00|17:00 19/01/2024</strong>
                       <p className="text-[0.96rem]">
                         Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá
                       </p>

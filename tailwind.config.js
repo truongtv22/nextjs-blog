@@ -25,6 +25,13 @@ module.exports = {
       colors: {
         primary: '#c89d9c',
       },
+
+      keyframes: {
+        preloader: {
+          from: { opacity: 1 },
+          to: { opacity: 0.3 },
+        },
+      },
     },
   },
   plugins: [],

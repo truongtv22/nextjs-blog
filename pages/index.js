@@ -127,7 +127,10 @@ export default function Home() {
           name="description"
           content="Văn Trường & Như Ngọc - Our wedding date: 20/01/2024"
         />
-        <meta name="og:title" content="Văn Trường & Như Ngọc Wedding | Save the date: 20/01/2024" />
+        <meta
+          name="og:title"
+          content="Văn Trường & Như Ngọc Wedding | Save the date: 20/01/2024"
+        />
         <meta property="og:image" content="/images/couple.jpeg"></meta>
       </Head>
       <main>
@@ -432,22 +435,24 @@ export default function Home() {
                 <h2 className="text-4xl">Sự Kiện Cưới</h2>
               </div>
               <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
-                <div className="bg-white p-4 rounded text-center space-y-4">
-                  <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
-                    LỄ NẠP TÀI
-                  </h3>
-                  <Image
-                    src={leNapTaiImg}
-                    alt="Lễ Nạp Tài"
-                    className="rounded"
-                  />
-                  <div className="space-y-2">
-                    <strong>08:00 18/01/2024</strong>
-                    <p className="text-[0.96rem]">
-                      Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá
-                    </p>
+                <div className="flex flex-col p-4 bg-white rounded space-y-4 justify-between">
+                  <div className="text-center space-y-4">
+                    <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
+                      LỄ NẠP TÀI
+                    </h3>
+                    <Image
+                      src={leNapTaiImg}
+                      alt="Lễ Nạp Tài"
+                      className="rounded"
+                    />
+                    <div className="space-y-2">
+                      <strong>08:00 18/01/2024</strong>
+                      <p className="text-[0.96rem]">
+                        Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá
+                      </p>
+                    </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="text-center space-y-2">
                     <div
                       className="flex p-1.5 border-2 rounded-full items-center justify-center cursor-pointer"
                       onClick={() => {
@@ -486,22 +491,24 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <div className="bg-white p-4 rounded text-center space-y-4">
-                  <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
-                    TIỆC CƯỚI NHÀ GÁI
-                  </h3>
-                  <Image
-                    src={nhaGaiImg}
-                    alt="Tiệc cưới nhà gái"
-                    className="rounded"
-                  />
-                  <div className="space-y-2">
-                    <strong>10:00 18/01/2024</strong>
-                    <p className="text-[0.96rem]">
-                      Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá
-                    </p>
+                <div className="flex flex-col p-4 bg-white rounded space-y-4 justify-between">
+                  <div className="text-center space-y-4">
+                    <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
+                      TIỆC CƯỚI NHÀ GÁI
+                    </h3>
+                    <Image
+                      src={nhaGaiImg}
+                      alt="Tiệc cưới nhà gái"
+                      className="rounded"
+                    />
+                    <div className="space-y-2">
+                      <strong>10:00 18/01/2024</strong>
+                      <p className="text-[0.96rem]">
+                        Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá
+                      </p>
+                    </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="text-center space-y-2">
                     <div
                       className="flex p-1.5 border-2 rounded-full items-center justify-center cursor-pointer"
                       onClick={() => {
@@ -540,22 +547,24 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <div className="bg-white p-4 rounded text-center space-y-4">
-                  <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
-                    TIỆC CƯỚI NHÀ TRAI
-                  </h3>
-                  <Image
-                    src={nhaTraiImg}
-                    alt="Tiệc cưới nhà trai"
-                    className="rounded"
-                  />
-                  <div className="space-y-2">
-                    <strong>10:00 19/01/2024</strong>
-                    <p className="text-[0.96rem]">
-                      Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá
-                    </p>
+                <div className="flex flex-col p-4 bg-white rounded space-y-4 justify-between">
+                  <div className="text-center space-y-4">
+                    <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
+                      TIỆC CƯỚI NHÀ TRAI
+                    </h3>
+                    <Image
+                      src={nhaTraiImg}
+                      alt="Tiệc cưới nhà trai"
+                      className="rounded"
+                    />
+                    <div className="space-y-2">
+                      <strong>10:00 19/01/2024</strong>
+                      <p className="text-[0.96rem]">
+                        Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá
+                      </p>
+                    </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="text-center space-y-2">
                     <div
                       className="flex p-1.5 border-2 rounded-full items-center justify-center cursor-pointer"
                       onClick={() => {
@@ -594,22 +603,24 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <div className="bg-white p-4 rounded text-center space-y-4">
-                  <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
-                    LỄ THÀNH HÔN
-                  </h3>
-                  <Image
-                    src={leThanhHonImg}
-                    alt="Lễ Thành Hôn"
-                    className="rounded"
-                  />
-                  <div className="space-y-2">
-                    <strong>09:00 20/01/2024</strong>
-                    <p className="text-[0.96rem]">
-                      Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá
-                    </p>
+                <div className="flex flex-col p-4 bg-white rounded space-y-4 justify-between">
+                  <div className="text-center space-y-4">
+                    <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
+                      LỄ THÀNH HÔN
+                    </h3>
+                    <Image
+                      src={leThanhHonImg}
+                      alt="Lễ Thành Hôn"
+                      className="rounded"
+                    />
+                    <div className="space-y-2">
+                      <strong>09:00 20/01/2024</strong>
+                      <p className="text-[0.96rem]">
+                        Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá
+                      </p>
+                    </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="text-center space-y-2">
                     <div
                       className="flex p-1.5 border-2 rounded-full items-center justify-center cursor-pointer"
                       onClick={() => {

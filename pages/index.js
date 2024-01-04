@@ -6,6 +6,7 @@ import {
   CalendarIcon,
   // ArrowRightIcon,
 } from '@heroicons/react/24/outline';
+import { atcb_action } from 'add-to-calendar-button/no-pro';
 
 import cdImg from '../public/images/cd-x.jpeg';
 import crImg from '../public/images/cr-x.jpeg';
@@ -132,7 +133,7 @@ export default function Home() {
         <div className="header">
           <div className="topbar container p-8">
             <div className="site-logo space-y-4 text-center">
-              <h1 className="text-4xl">
+              <h1 className="md:text-4xl sm:text-2xl text-xl">
                 <span>Văn Trường </span>
                 <HeartIcon className="inline w-8 h-8 text-primary" />
                 <span> Như Ngọc</span>
@@ -146,14 +147,14 @@ export default function Home() {
           </div>
           <div className="navbar border-t border-gray-100">
             <div className="container">
-              <ul className="flex justify-center">
-                <li className="p-4 font-bold">
+              <ul className="flex flex-col md:flex-row justify-center">
+                <li className="p-4 md:text-base text-sm font-bold">
                   <a href="#couple">Về chúng mình</a>
                 </li>
-                <li className="p-4 font-bold">
+                <li className="p-4 md:text-base md:border-none text-sm font-bold border-t border-b border-primary border-opacity-25">
                   <a href="#events">Sự kiện</a>
                 </li>
-                <li className="p-4 font-bold">
+                <li className="p-4 md:text-base text-sm font-bold">
                   <a href="#album">Album cưới</a>
                 </li>
               </ul>
@@ -165,13 +166,13 @@ export default function Home() {
             <Image
               src={bannerImg}
               alt="Banner"
-              className="h-[calc(100vh-210px)] min-h-[30rem] object-cover"
+              className="w-full h-[calc(100vh-210px)] min-h-[30rem] object-cover"
             />
             <div className="absolute inset-0 bg-black opacity-25" />
             <div className="container absolute inset-0 m-auto h-fit space-y-4 text-center">
-              <h2 className="text-7xl text-white">
+              <h2 className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl text-white">
                 <span>Văn Trường </span>
-                <HeartIcon className="inline w-14 h-14 text-primary" />
+                <HeartIcon className="md:inline w-14 h-14 m-auto text-primary" />
                 <span> Như Ngọc</span>
               </h2>
               <div>
@@ -182,14 +183,14 @@ export default function Home() {
             </div>
           </div>
           <div className="invitation-section py-28 bg-[url(/images/bg.png)] overflow-hidden">
-            <div className="container flex space-x-6">
-              <div className="flex-1 relative p-8 bg-white rounded-sm text-center">
+            <div className="container flex flex-col md:flex-row md:space-x-6">
+              <div className="flex-1 relative p-8 text-center rounded-sm bg-white">
                 <div className="absolute left-[-150px] top-[-100px] w-[220px] h-[414px] bg-[url(/images/invitation-left.png)] bg-center bg-cover bg-no-repeat" />
                 <div className="h-full p-4 py-12 border-4 border-primary/40 space-y-6">
-                  <h2 className="text-5xl">Save the Date</h2>
+                  <h2 className="lg:text-5xl text-4xl">Save the Date</h2>
                   <div className="space-y-2">
                     <span className="text-gray-500">For the wedding of</span>
-                    <h3 className="font-bold text-2xl">
+                    <h3 className="font-bold lg:text-2xl text-xl">
                       Văn Trường & Như Ngọc
                     </h3>
                   </div>
@@ -198,9 +199,9 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="flex-1 relative bg-white rounded-sm p-8">
+              <div className="flex-1 relative p-8 rounded-sm bg-white">
                 <div className="absolute right-[-120px] bottom-[-100px] w-[400px] h-[508px] bg-[url(/images/invitation-right.png)] bg-center bg-cover bg-no-repeat" />
-                <div className="h-full p-4 border-4 border-primary/40 space-y-4">
+                <div className="h-full p-4 border-4 border-primary/40 space-y-4 overflow-x-auto">
                   <div className="space-y-2">
                     <div className="text-center">
                       <p className="font-bold">THÁNG 1 / 2024</p>
@@ -208,25 +209,25 @@ export default function Home() {
                     <table className="table-auto border-b ml-auto mr-auto">
                       <thead className="border-t border-b">
                         <tr className="h-8">
-                          <th className="min-w-14">
+                          <th className="w-14 min-w-9">
                             <p className="text-sm">Th 2</p>
                           </th>
-                          <th className="min-w-14">
+                          <th className="w-14 min-w-9">
                             <p className="text-sm">Th 3</p>
                           </th>
-                          <th className="min-w-14">
+                          <th className="w-14 min-w-9">
                             <p className="text-sm">Th 4</p>
                           </th>
-                          <th className="min-w-14">
+                          <th className="w-14 min-w-9">
                             <p className="text-sm">Th 5</p>
                           </th>
-                          <th className="min-w-14">
+                          <th className="w-14 min-w-9">
                             <p className="text-sm">Th 6</p>
                           </th>
-                          <th className="min-w-14">
+                          <th className="w-14 min-w-9">
                             <p className="text-sm">Th 7</p>
                           </th>
-                          <th className="min-w-14">
+                          <th className="w-14 min-w-9">
                             <p className="text-sm">CN</p>
                           </th>
                         </tr>
@@ -288,7 +289,7 @@ export default function Home() {
                           <td>
                             <p className="text-sm">17</p>
                           </td>
-                          <td className="relative">
+                          <td className="relative min-w-12">
                             <div className="flex items-center justify-center">
                               <div className="bg-primary w-7 h-7 rounded-full flex items-center justify-center">
                                 <p className="text-sm text-white">18</p>
@@ -301,7 +302,7 @@ export default function Home() {
                           <td>
                             <p className="text-sm">19</p>
                           </td>
-                          <td className="relative">
+                          <td className="relative min-w-12">
                             <div className="relative">
                               <Image
                                 src={heartIcon}
@@ -372,43 +373,45 @@ export default function Home() {
             <div className="relative pt-20 text-center before:content-[''] before:bg-[url(/images/title-flower.png)] before:bg-center before:bg-cover before:bg-no-repeat before:w-[126px] before:h-[59px] before:absolute before:left-1/2 before:top-0 before:-translate-x-1/2">
               <h2 className="text-4xl">Cô dâu & Chú rể</h2>
             </div>
-            <div className="flex space-x-2">
-              <div className="flex flex-1 flex-row-reverse">
-                <Image
-                  src={crImg}
-                  alt="Chú rể Văn Trường"
-                  className="w-40 h-40 ring-4 ring-primary rounded-full"
-                />
-                <div className="flex-1 space-y-4">
-                  <h2 className="text-3xl text-right">Tạ Văn Trường</h2>
-                  <div className="-mr-3 p-6 rounded ring-4 ring-primary bg-gray-50">
-                    <p>
-                      Xin chào, Mình là Trường, 29 tuổi, hiện tại đang làm lập
-                      trình viên tại Thanh Hóa. Mình và Cô Dâu sau thời gian tìm
-                      hiểu, nay chúng mình tổ chức Hôn lễ. Mình và Cô Dâu rất
-                      mong mọi người dành chút thời gian đến tham dự đám cưới
-                      của chúng mình.
-                    </p>
-                  </div>
+            <div className="flex flex-col lg:flex-row md:flex-row lg:space-x-2 md:space-x-2 space-y-4 lg:space-y-0 md:space-y-0">
+              <div className="flex-1 space-y-4">
+                <div className="relative flex justify-end items-end">
+                  <h2 className="text-3xl mr-4 lg:mr-40">Tạ Văn Trường</h2>
+                  <Image
+                    src={crImg}
+                    alt="Chú rể Văn Trường"
+                    className="relative lg:absolute lg:top-0 lg:right-0 lg:w-40 lg:h-40 w-24 h-24 ring-4 ring-primary rounded-full"
+                  />
+                </div>
+                <div className="lg:mr-36 p-6 rounded ring-4 ring-primary bg-gray-50">
+                  <p>
+                    Xin chào, Mình là Trường, 29 tuổi, hiện tại đang làm lập
+                    trình viên tại Thanh Hóa. Mình và Cô Dâu sau thời gian tìm
+                    hiểu, nay chúng mình tổ chức Hôn lễ. Mình và Cô Dâu rất mong
+                    mọi người dành chút thời gian đến tham dự đám cưới của chúng
+                    mình.
+                  </p>
                 </div>
               </div>
-              <HeartIcon className="inline mt-10 w-16 h-16 text-primary" />
-              <div className="flex flex-1">
-                <Image
-                  src={cdImg}
-                  alt="Cô dâu Như Ngọc"
-                  className="z-10 w-40 h-40 ring-4 ring-primary rounded-full"
-                />
-                <div className="flex-1 space-y-4">
-                  <h2 className="text-3xl">Đỗ Thị Như Ngọc</h2>
-                  <div className="-ml-3 p-6 rounded ring-4 ring-primary bg-gray-50">
-                    <p>
-                      Hi, Mình là Như Ngọc, 24 tuổi, Mình và Chú Rể cùng quê
-                      luôn nha. Hôm nay, chúng mình hạnh phúc chia sẻ niềm vui
-                      này với mọi người. Mình và Chú Rể rất mong mọi người dành
-                      chút thời gian đến tham dự đám cưới của chúng mình.
-                    </p>
-                  </div>
+              <div>
+                <HeartIcon className="md:inline m-auto lg:mt-10 md:mt-4 w-16 h-16 text-primary" />
+              </div>
+              <div className="flex-1 space-y-4">
+                <div className="relative flex lg:flex-row flex-row-reverse lg:justify-start justify-end items-end">
+                  <h2 className="text-3xl ml-4 lg:ml-40">Đỗ Thị Như Ngọc</h2>
+                  <Image
+                    src={cdImg}
+                    alt="Cô dâu Như Ngọc"
+                    className="relative lg:absolute lg:top-0 lg:left-0 lg:w-40 lg:h-40 w-24 h-24 ring-4 ring-primary rounded-full"
+                  />
+                </div>
+                <div className="lg:ml-36 p-6 rounded ring-4 ring-primary bg-gray-50">
+                  <p>
+                    Hi, Mình là Như Ngọc, 24 tuổi, Mình và Chú Rể cùng quê luôn
+                    nha. Hôm nay, chúng mình hạnh phúc chia sẻ niềm vui này với
+                    mọi người. Mình và Chú Rể rất mong mọi người dành chút thời
+                    gian đến tham dự đám cưới của chúng mình.
+                  </p>
                 </div>
               </div>
             </div>
@@ -421,7 +424,7 @@ export default function Home() {
               <div className="text-center">
                 <h2 className="text-4xl">Sự Kiện Cưới</h2>
               </div>
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
                 <div className="bg-white p-4 rounded text-center space-y-4">
                   <h3 className="relative pb-2 text-[1.15rem] before:absolute before:content-[''] before:bg-primary before:w-32 before:h-0.5 before:left-1/2 before:-translate-x-1/2 before:bottom-0">
                     LỄ NẠP TÀI
@@ -438,13 +441,42 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex p-1.5 border-2 rounded-full items-center justify-center">
+                    <div
+                      className="flex p-1.5 border-2 rounded-full items-center justify-center cursor-pointer"
+                      onClick={() => {
+                        atcb_action({
+                          name: 'LỄ NẠP TÀI (Đám cưới Văn Trường và Như Ngọc)',
+                          description:
+                            'Cảm ơn bạn đã dành thời gian tham dự đám cưới của chúng mình!. Thông tin chi tiết xem tại website: https://truongngoc-wedding.vercel.app',
+                          startDate: '2024-01-18',
+                          startTime: '08:00',
+                          location:
+                            'Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá',
+                          endDate: '2024-01-18',
+                          endTime: '08:00',
+                          options: [
+                            'Apple',
+                            'Google',
+                            'iCal',
+                            'Microsoft365',
+                            'MicrosoftTeams',
+                            'Outlook.com',
+                            'Yahoo',
+                          ],
+                          timeZone: 'Asia/Saigon',
+                        });
+                      }}
+                    >
                       <CalendarIcon className="w-5 h-5 mr-2" />
                       <p className="mt-1">Thêm vào lịch</p>
                     </div>
-                    <div className="p-1.5 border-2 rounded-full text-primary border-primary">
+                    <a
+                      href="https://maps.app.goo.gl/WgNaYs9FSXmwCWDo6"
+                      target="_blank"
+                      className="block p-1.5 border-2 rounded-full text-primary border-primary"
+                    >
                       Xem bản đồ
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded text-center space-y-4">
@@ -463,13 +495,42 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex p-1.5 border-2 rounded-full items-center justify-center">
+                    <div
+                      className="flex p-1.5 border-2 rounded-full items-center justify-center cursor-pointer"
+                      onClick={() => {
+                        atcb_action({
+                          name: 'TIỆC CƯỚI NHÀ GÁI (Đám cưới Văn Trường và Như Ngọc)',
+                          description:
+                            'Cảm ơn bạn đã dành thời gian tham dự đám cưới của chúng mình!. Thông tin chi tiết xem tại website: https://truongngoc-wedding.vercel.app',
+                          startDate: '2024-01-18',
+                          startTime: '09:30',
+                          location:
+                            'Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá',
+                          endDate: '2024-01-18',
+                          endTime: '09:30',
+                          options: [
+                            'Apple',
+                            'Google',
+                            'iCal',
+                            'Microsoft365',
+                            'MicrosoftTeams',
+                            'Outlook.com',
+                            'Yahoo',
+                          ],
+                          timeZone: 'Asia/Saigon',
+                        });
+                      }}
+                    >
                       <CalendarIcon className="w-5 h-5 mr-2" />
                       <p className="mt-1">Thêm vào lịch</p>
                     </div>
-                    <div className="p-1.5 border-2 rounded-full text-primary border-primary">
+                    <a
+                      href="https://maps.app.goo.gl/WgNaYs9FSXmwCWDo6"
+                      target="_blank"
+                      className="block p-1.5 border-2 rounded-full text-primary border-primary"
+                    >
                       Xem bản đồ
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded text-center space-y-4">
@@ -488,13 +549,42 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex p-1.5 border-2 rounded-full items-center justify-center">
+                    <div
+                      className="flex p-1.5 border-2 rounded-full items-center justify-center cursor-pointer"
+                      onClick={() => {
+                        atcb_action({
+                          name: 'TIỆC CƯỚI NHÀ TRAI (Đám cưới Văn Trường và Như Ngọc)',
+                          description:
+                            'Cảm ơn bạn đã dành thời gian tham dự đám cưới của chúng mình!. Thông tin chi tiết xem tại website: https://truongngoc-wedding.vercel.app',
+                          startDate: '2024-01-19',
+                          startTime: '10:00',
+                          location:
+                            'Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá',
+                          endDate: '2024-01-19',
+                          endTime: '10:00',
+                          options: [
+                            'Apple',
+                            'Google',
+                            'iCal',
+                            'Microsoft365',
+                            'MicrosoftTeams',
+                            'Outlook.com',
+                            'Yahoo',
+                          ],
+                          timeZone: 'Asia/Saigon',
+                        });
+                      }}
+                    >
                       <CalendarIcon className="w-5 h-5 mr-2" />
                       <p className="mt-1">Thêm vào lịch</p>
                     </div>
-                    <div className="p-1.5 border-2 rounded-full text-primary border-primary">
+                    <a
+                      href="https://maps.app.goo.gl/DyZCZQbSJpERmx9H6"
+                      target="_blank"
+                      className="block p-1.5 border-2 rounded-full text-primary border-primary"
+                    >
                       Xem bản đồ
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded text-center space-y-4">
@@ -513,13 +603,42 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex p-1.5 border-2 rounded-full items-center justify-center">
+                    <div
+                      className="flex p-1.5 border-2 rounded-full items-center justify-center cursor-pointer"
+                      onClick={() => {
+                        atcb_action({
+                          name: 'LỄ THÀNH HÔN (Đám cưới Văn Trường và Như Ngọc)',
+                          description:
+                            'Cảm ơn bạn đã dành thời gian tham dự đám cưới của chúng mình!. Thông tin chi tiết xem tại website: https://truongngoc-wedding.vercel.app',
+                          startDate: '2024-01-20',
+                          startTime: '09:00',
+                          location:
+                            'Số 63 Yên Vực, Phường Tào Xuyên, TP Thanh Hoá',
+                          endDate: '2024-01-20',
+                          endTime: '09:00',
+                          options: [
+                            'Apple',
+                            'Google',
+                            'iCal',
+                            'Microsoft365',
+                            'MicrosoftTeams',
+                            'Outlook.com',
+                            'Yahoo',
+                          ],
+                          timeZone: 'Asia/Saigon',
+                        });
+                      }}
+                    >
                       <CalendarIcon className="w-5 h-5 mr-2" />
                       <p className="mt-1">Thêm vào lịch</p>
                     </div>
-                    <div className="p-1.5 border-2 rounded-full text-primary border-primary">
+                    <a
+                      href="https://maps.app.goo.gl/DyZCZQbSJpERmx9H6"
+                      target="_blank"
+                      className="block p-1.5 border-2 rounded-full text-primary border-primary"
+                    >
                       Xem bản đồ
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -548,7 +667,7 @@ export default function Home() {
                     infinite: false,
                   },
                 }}
-                className="grid grid-cols-3 gap-4"
+                className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4"
               >
                 {galleries.map((item) => (
                   <a key={item.image} data-fancybox="gallery" href={item.image}>
@@ -560,7 +679,7 @@ export default function Home() {
           </div>
         </div>
         <div className="footer relative text-center py-36 bg-[url(/images/footer-bg.png)] bg-[center_bottom] bg-[length:100%] bg-no-repeat space-y-10">
-          <div className="relative w-[511px] h-[470px] mx-auto bg-[url(/images/footer-couple.png)]">
+          <div className="relative w-[300px] h-[276px] lg:w-[511px] lg:h-[470px] mx-auto bg-[url(/images/footer-couple.png)] bg-center bg-cover bg-no-repeat">
             <Image
               src={coupleImg}
               alt="Văn Trường & Như Ngọc Wedding"

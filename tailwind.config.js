@@ -17,6 +17,10 @@ module.exports = {
         },
       },
 
+      screens: {
+        xs: '480px',
+      },
+
       fontFamily: {
         display: ['var(--font-display)', ...defaultTheme.fontFamily.sans],
         body: ['var(--font-body)', ...defaultTheme.fontFamily.sans],

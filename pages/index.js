@@ -147,15 +147,21 @@ export default function Home() {
           <div className="navbar border-t border-gray-100">
             <div className="container">
               <ul className="flex justify-center">
-                <li className="p-4 font-bold">Về chúng mình</li>
-                <li className="p-4 font-bold">Sự kiện</li>
-                <li className="p-4 font-bold">Album cưới</li>
+                <li className="p-4 font-bold">
+                  <a href="#couple">Về chúng mình</a>
+                </li>
+                <li className="p-4 font-bold">
+                  <a href="#events">Sự kiện</a>
+                </li>
+                <li className="p-4 font-bold">
+                  <a href="#album">Album cưới</a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
         <div className="body">
-          <div className="slider-section relative ">
+          <div className="slider-section relative">
             <Image
               src={bannerImg}
               alt="Banner"
@@ -359,7 +365,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="couple-section container py-28 space-y-10">
+          <div
+            id="couple"
+            className="couple-section container py-28 space-y-10"
+          >
             <div className="relative pt-20 text-center before:content-[''] before:bg-[url(/images/title-flower.png)] before:bg-center before:bg-cover before:bg-no-repeat before:w-[126px] before:h-[59px] before:absolute before:left-1/2 before:top-0 before:-translate-x-1/2">
               <h2 className="text-4xl">Cô dâu & Chú rể</h2>
             </div>
@@ -404,7 +413,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="event-section py-28 bg-[url(/images/bg.png)]">
+          <div
+            id="events"
+            className="event-section py-28 bg-[url(/images/bg.png)]"
+          >
             <div className="container space-y-10">
               <div className="text-center">
                 <h2 className="text-4xl">Sự Kiện Cưới</h2>
@@ -513,7 +525,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="gallery-section container py-28 space-y-10">
+          <div
+            id="album"
+            className="gallery-section container py-28 space-y-10"
+          >
             <div className="relative pt-20 text-center before:content-[''] before:bg-[url(/images/title-flower.png)] before:bg-center before:bg-cover before:bg-no-repeat before:w-[126px] before:h-[59px] before:absolute before:left-1/2 before:top-0 before:-translate-x-1/2 space-y-4">
               <h2 className="text-4xl">Album Hình Cưới</h2>
               {/* <div className="flex items-center justify-center">

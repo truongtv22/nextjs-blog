@@ -120,14 +120,15 @@ export default function Home() {
         <title>Văn Trường & Như Ngọc Wedding</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Văn Trường & Như Ngọc - Our wedding date: 2024-01-20"
-        />
-        <meta name="og:title" content="Văn Trường & Như Ngọc Wedding" />
-        <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <meta
+          name="description"
+          content="Văn Trường & Như Ngọc - Our wedding date: 20/01/2024"
+        />
+        <meta name="og:title" content="Văn Trường & Như Ngọc Wedding | Save the date: 20/01/2024" />
+        <meta property="og:image" content="/images/couple.jpeg"></meta>
       </Head>
       <main>
         <div className="header">

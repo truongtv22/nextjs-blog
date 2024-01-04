@@ -496,7 +496,7 @@ export default function Home() {
                     className="rounded"
                   />
                   <div className="space-y-2">
-                    <strong>09:30 18/01/2024</strong>
+                    <strong>10:00 18/01/2024</strong>
                     <p className="text-[0.96rem]">
                       Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá
                     </p>
@@ -510,11 +510,11 @@ export default function Home() {
                           description:
                             'Cảm ơn bạn đã dành thời gian tham dự đám cưới của chúng mình!. Thông tin chi tiết xem tại website: https://truongngoc-wedding.vercel.app',
                           startDate: '2024-01-18',
-                          startTime: '09:30',
+                          startTime: '10:00',
                           location:
                             'Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá',
                           endDate: '2024-01-18',
-                          endTime: '09:30',
+                          endTime: '10:00',
                           options: [
                             'Apple',
                             'Google',

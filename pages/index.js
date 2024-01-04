@@ -133,7 +133,7 @@ export default function Home() {
         <div className="header">
           <div className="topbar container p-8">
             <div className="site-logo space-y-4 text-center">
-              <h1 className="md:text-4xl sm:text-2xl text-xl">
+              <h1 className="md:text-4xl text-2xl">
                 <span>Văn Trường </span>
                 <HeartIcon className="inline w-8 h-8 text-primary" />
                 <span> Như Ngọc</span>

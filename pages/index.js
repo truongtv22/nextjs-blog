@@ -149,13 +149,19 @@ export default function Home() {
             <div className="container">
               <ul className="flex flex-col md:flex-row justify-center">
                 <li className="p-4 md:text-base text-sm font-bold">
-                  <a href="#couple">Về chúng mình</a>
+                  <a href="#couple" className="block">
+                    Về chúng mình
+                  </a>
                 </li>
                 <li className="p-4 md:text-base md:border-none text-sm font-bold border-t border-b border-primary border-opacity-25">
-                  <a href="#events">Sự kiện</a>
+                  <a href="#events" className="block">
+                    Sự kiện
+                  </a>
                 </li>
                 <li className="p-4 md:text-base text-sm font-bold">
-                  <a href="#album">Album cưới</a>
+                  <a href="#album" className="block">
+                    Album cưới
+                  </a>
                 </li>
               </ul>
             </div>

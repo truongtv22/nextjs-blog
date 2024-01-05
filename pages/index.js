@@ -8,7 +8,7 @@ import {
   // ArrowRightIcon,
 } from '@heroicons/react/24/outline';
 import { atcb_action } from 'add-to-calendar-button/no-pro';
-import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
+import { Map, Marker } from '@vis.gl/react-google-maps';
 
 import cdImg from '../public/images/cd-x.jpeg';
 import crImg from '../public/images/cr-x.jpeg';
@@ -31,6 +31,13 @@ const CountDown = dynamic(() => import('../components/count-down'), {
 const Fancybox = dynamic(() => import('../components/fancybox'), {
   ssr: false,
 });
+
+const APIProvider = dynamic(
+  () => import('@vis.gl/react-google-maps').then((mod) => mod.APIProvider),
+  {
+    ssr: false,
+  },
+);
 
 const galleries = [
   {
@@ -663,28 +670,40 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center">
-    <APIProvider apiKey="AIzaSyBc79YjDmyKtgnxZ6HBcgxZwZnpn4TBw_8">
-                <Map
-                  zoom={16}
-                  center={{ lat: 19.8407748, lng: 105.7960108 }}
-                  disableDefaultUI={true}
-                  className="w-96 h-96 rounded"
-                >
-                  <Marker
-                    position={{
-                      lat: 19.83950160750326,
-                      lng: 105.79671921336987,
-                    }}
-                    icon="/images/nhagai-pin.png"
-                  />
-                  <Marker
-                    position={{
-                      lat: 19.8423622749635,
-                      lng: 105.79615727632489,
-                    }}
-                    icon="/images/nhatrai-pin.png"
-                  />
-                </Map>
+                <APIProvider apiKey="AIzaSyBc79YjDmyKtgnxZ6HBcgxZwZnpn4TBw_8">
+                  <Map
+                    zoom={15.6}
+                    center={{ lat: 19.8412922, lng: 105.7964035 }}
+                    disableDefaultUI={true}
+                    className="lg:w-1/2 w-full h-64 rounded border"
+                  >
+                    <Marker
+                      position={{
+                        lat: 19.838903,
+                        lng: 105.7965707,
+                      }}
+                      icon="/images/nhagai-pin.png"
+                      onClick={() => {
+                        window.open(
+                          'https://www.google.com/maps/dir/?api=1&destination=19.838903,105.7965707',
+                          '_blank',
+                        );
+                      }}
+                    />
+                    <Marker
+                      position={{
+                        lat: 19.8423622749635,
+                        lng: 105.79615727632489,
+                      }}
+                      icon="/images/nhatrai-pin.png"
+                      onClick={() => {
+                        window.open(
+                          'https://www.google.com/maps/dir/?api=1&destination=19.8418868,105.7953145',
+                          '_blank',
+                        );
+                      }}
+                    />
+                  </Map>
                 </APIProvider>
               </div>
             </div>

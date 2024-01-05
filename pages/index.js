@@ -8,6 +8,7 @@ import {
   // ArrowRightIcon,
 } from '@heroicons/react/24/outline';
 import { atcb_action } from 'add-to-calendar-button/no-pro';
+import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
 
 import cdImg from '../public/images/cd-x.jpeg';
 import crImg from '../public/images/cr-x.jpeg';
@@ -134,26 +135,6 @@ export default function Home() {
         />
         <meta property="og:image" content="/images/couple.jpeg" />
       </Head>
-      <Script
-        src="/mapsJavaScriptAPI.js"
-        async
-        defer
-        onReady={() => {
-          window.initMap = () => {
-            const map = new window.google.maps.Map(
-              document.getElementById('map'),
-              {
-                center: {
-                  lat: -33.882187220756414,
-                  lng: 151.2767013905593,
-                },
-                // styles: style,
-                zoom: 12,
-              },
-            );
-          };
-        }}
-      />
       <main>
         <div className="header">
           <div className="topbar container p-8">
@@ -523,7 +504,7 @@ export default function Home() {
                       className="rounded"
                     />
                     <div className="space-y-2">
-                      <strong>10:00|17:00 18/01/2024</strong>
+                      <strong>10:00|17:30 18/01/2024</strong>
                       <p className="text-[0.96rem]">
                         Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá
                       </p>
@@ -681,8 +662,30 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div>
-                <div id="map" />
+              <div className="flex justify-center">
+    <APIProvider apiKey="AIzaSyBc79YjDmyKtgnxZ6HBcgxZwZnpn4TBw_8">
+                <Map
+                  zoom={16}
+                  center={{ lat: 19.8407748, lng: 105.7960108 }}
+                  disableDefaultUI={true}
+                  className="w-96 h-96 rounded"
+                >
+                  <Marker
+                    position={{
+                      lat: 19.83950160750326,
+                      lng: 105.79671921336987,
+                    }}
+                    icon="/images/nhagai-pin.png"
+                  />
+                  <Marker
+                    position={{
+                      lat: 19.8423622749635,
+                      lng: 105.79615727632489,
+                    }}
+                    icon="/images/nhatrai-pin.png"
+                  />
+                </Map>
+                </APIProvider>
               </div>
             </div>
           </div>

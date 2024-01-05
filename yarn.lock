@@ -158,10 +158,22 @@
   dependencies:
     tslib "^2.4.0"
 
+"@types/google.maps@^3.54.10":
+  version "3.54.10"
+  resolved "https://registry.yarnpkg.com/@types/google.maps/-/google.maps-3.54.10.tgz#f3101dda3e873f3602ae664cf518592686ca215b"
+  integrity sha512-N6gwM01mKhooXaw+IKbUH7wJcIJCn8U60VoaVvom5EiQjmfgevhQ+0+/r17beXW5j8ad2x+WPr0iyOUodCw4/w==
+
 "@types/js-cookie@^2.x.x":
   version "2.2.7"
   resolved "https://registry.yarnpkg.com/@types/js-cookie/-/js-cookie-2.2.7.tgz#226a9e31680835a6188e887f3988e60c04d3f6a3"
   integrity sha512-aLkWa0C0vO5b4Sr798E26QgOkss68Un0bLjs7u9qxzPT5CG+8DuNTffWES58YzJs3hrVAOs1wonycqEBqNJubA==
+
+"@vis.gl/react-google-maps@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@vis.gl/react-google-maps/-/react-google-maps-0.4.2.tgz#406ae358335eca089b1caf81db968d4ca5ff6e6d"
+  integrity sha512-h9lwefQyaWCHv6hGGAtR/xgG71rpepi0ORs/Q3dMCF7kj1z6Z1GCY2ygc7ylGA3GHJmUmigAabuFW9HYeDpWow==
+  dependencies:
+    "@types/google.maps" "^3.54.10"
 
 add-to-calendar-button@^2.5.7:
   version "2.5.7"

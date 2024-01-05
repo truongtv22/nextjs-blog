@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
+
+// import Snowfall from 'react-snowfall';
 import {
   HeartIcon,
   CalendarIcon,
@@ -29,6 +31,10 @@ const CountDown = dynamic(() => import('../components/count-down'), {
 });
 
 const Fancybox = dynamic(() => import('../components/fancybox'), {
+  ssr: false,
+});
+
+const Snowfall = dynamic(() => import('react-snowfall'), {
   ssr: false,
 });
 
@@ -753,6 +759,11 @@ export default function Home() {
           <h2 className="text-6xl">Thank you!</h2>
         </div>
       </main>
+      <Snowfall
+        color="#fff"
+        style={{ position: 'fixed', height: '100vh', width: '100vw' }}
+        snowflakeCount={50}
+      />
     </div>
   );
 }

@@ -498,7 +498,7 @@ export default function Home() {
                       <p className="mt-1">Thêm vào lịch</p>
                     </div>
                     <a
-                      href="https://maps.app.goo.gl/WgNaYs9FSXmwCWDo6"
+                      href="https://maps.app.goo.gl/oBCFVmCZZkdaToRp8"
                       target="_blank"
                       className="block p-1.5 border-2 rounded-full text-primary border-primary"
                     >
@@ -554,7 +554,7 @@ export default function Home() {
                       <p className="mt-1">Thêm vào lịch</p>
                     </div>
                     <a
-                      href="https://maps.app.goo.gl/WgNaYs9FSXmwCWDo6"
+                      href="https://maps.app.goo.gl/oBCFVmCZZkdaToRp8"
                       target="_blank"
                       className="block p-1.5 border-2 rounded-full text-primary border-primary"
                     >
@@ -691,7 +691,7 @@ export default function Home() {
                       icon="/images/nhagai-pin.png"
                       onClick={() => {
                         window.open(
-                          'https://maps.app.goo.gl/WgNaYs9FSXmwCWDo6',
+                          'https://maps.app.goo.gl/oBCFVmCZZkdaToRp8',
                           '_blank',
                         );
                       }}

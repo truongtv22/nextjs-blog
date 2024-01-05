@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Script from 'next/script';
 import dynamic from 'next/dynamic';
 import {
   HeartIcon,
@@ -131,8 +132,28 @@ export default function Home() {
           name="og:title"
           content="Văn Trường & Như Ngọc Wedding | Save the date: 20/01/2024"
         />
-        <meta property="og:image" content="/images/couple.jpeg"></meta>
+        <meta property="og:image" content="/images/couple.jpeg" />
       </Head>
+      <Script
+        src="/mapsJavaScriptAPI.js"
+        async
+        defer
+        onReady={() => {
+          window.initMap = () => {
+            const map = new window.google.maps.Map(
+              document.getElementById('map'),
+              {
+                center: {
+                  lat: -33.882187220756414,
+                  lng: 151.2767013905593,
+                },
+                // styles: style,
+                zoom: 12,
+              },
+            );
+          };
+        }}
+      />
       <main>
         <div className="header">
           <div className="topbar container p-8">
@@ -502,7 +523,7 @@ export default function Home() {
                       className="rounded"
                     />
                     <div className="space-y-2">
-                      <strong>10:00 18/01/2024</strong>
+                      <strong>10:00|17:00 18/01/2024</strong>
                       <p className="text-[0.96rem]">
                         Số 74 Nghĩa Sơn 2, Phường Tào Xuyên, TP Thanh Hoá
                       </p>
@@ -659,6 +680,9 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
+              </div>
+              <div>
+                <div id="map" />
               </div>
             </div>
           </div>

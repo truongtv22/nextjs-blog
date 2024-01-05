@@ -691,7 +691,7 @@ export default function Home() {
                       icon="/images/nhagai-pin.png"
                       onClick={() => {
                         window.open(
-                          'https://www.google.com/maps/dir/?api=1&destination=19.838903,105.7965707',
+                          'https://maps.app.goo.gl/WgNaYs9FSXmwCWDo6',
                           '_blank',
                         );
                       }}
@@ -704,7 +704,7 @@ export default function Home() {
                       icon="/images/nhatrai-pin.png"
                       onClick={() => {
                         window.open(
-                          'https://www.google.com/maps/dir/?api=1&destination=19.8418868,105.7953145',
+                          'https://maps.app.goo.gl/DyZCZQbSJpERmx9H6',
                           '_blank',
                         );
                       }}

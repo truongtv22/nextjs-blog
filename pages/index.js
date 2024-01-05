@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
+import { Analytics } from '@vercel/analytics/react';
 
-// import Snowfall from 'react-snowfall';
 import {
   HeartIcon,
   CalendarIcon,
@@ -764,6 +764,7 @@ export default function Home() {
         style={{ position: 'fixed', height: '100vh', width: '100vw' }}
         snowflakeCount={50}
       />
+      <Analytics />
     </div>
   );
 }

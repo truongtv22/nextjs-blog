@@ -9,6 +9,7 @@
     "@fancyapps/ui": "^5.0.33",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.1.1",
+    "@vis.gl/react-google-maps": "^0.4.2",
     "add-to-calendar-button": "^2.5.7",
     "ahooks": "^3.7.8",
     "dayjs": "^1.11.10",
